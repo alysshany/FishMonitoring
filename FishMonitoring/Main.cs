@@ -28,7 +28,7 @@ namespace FishMonitoring
                 return;
             }
             string fileName = openFileDialog.FileName;
-            string[] data = Parsing.Parse(fileName);
+            string[] data = Parsing.Parse(fileName).Split(";");
             txtBoxDateBeg.Text = data[0];
             txtBoxTempEd.Text = data[1];
         }

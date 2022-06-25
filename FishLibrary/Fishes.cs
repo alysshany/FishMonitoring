@@ -6,7 +6,13 @@ namespace FishLibrary
 {
     public class Fishes
     {
-        public static List<Fish> fish;
+        public static List<Fish> FishList;
+
+        public Fishes()
+        {
+            FishList = new List<Fish>();
+        } 
+
         public static string Info(string name)
         {
             switch (name)
@@ -30,7 +36,7 @@ namespace FishLibrary
             switch (name)
             {
                 case "Pollack":
-                    fish.Add(new Pollack(data, temp));
+                    FishList.Add(new Pollack(data, temp));
                     if (Checking(name, temp, data) == null)
                     {
                         return null;
@@ -38,6 +44,7 @@ namespace FishLibrary
                     s = Checking(name, temp, data);
                     return s;
                 case "Salmon":
+                    FishList.Add(new Salmon(data, temp));
                     if (Checking(name, temp, data) == null)
                     {
                         return null;
@@ -59,7 +66,7 @@ namespace FishLibrary
             switch (name)
             {
                 case "Pollack":
-                    for (int i = 0; i <= newTemp.Length; i++)
+                    for (int i = 0; i < newTemp.Length; i++)
                     {
                         if (Convert.ToInt32(newTemp[i]) > Pollack.maxTemp)
                         {
@@ -69,7 +76,7 @@ namespace FishLibrary
                     }
                     if (countMax*10 >= Pollack.maxTempTime)
                     {
-                        return errors + " " + countMax*10;
+                        return errors;
                     }
                     return null;
                 case "Salmon":

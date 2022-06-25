@@ -5,26 +5,24 @@ namespace ParsingLibrary
 {
     public class Parsing
     {
-        public static string[] Parse(string path)
+        public static string Parse(string path)
         {
-            string[] infoTemp = null;
+            string infoTemp = "";
             using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
             {
                 int i = 1;
-                int k = 0;
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
                     if (i % 2 == 0)
                     {
-                        infoTemp[k] = ";" + line;
+                        infoTemp += line;
                     }
                     else
                     {
-                        infoTemp[k] = line;
+                        infoTemp += line + ";";
                     }
                     i++;
-                    k++;
                 }
             }
             return infoTemp;
