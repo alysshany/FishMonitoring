@@ -36,7 +36,7 @@ namespace FishMonitoring
             this.txtBoxMinTime = new System.Windows.Forms.TextBox();
             this.txtBoxMin = new System.Windows.Forms.TextBox();
             this.txtBoxMaxTime = new System.Windows.Forms.TextBox();
-            this.txtBoxmaxTemp = new System.Windows.Forms.TextBox();
+            this.txtBoxMaxTemp = new System.Windows.Forms.TextBox();
             this.lstBoxMain = new System.Windows.Forms.ListBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pnlMain.SuspendLayout();
@@ -51,7 +51,7 @@ namespace FishMonitoring
             this.pnlMain.Controls.Add(this.txtBoxMinTime);
             this.pnlMain.Controls.Add(this.txtBoxMin);
             this.pnlMain.Controls.Add(this.txtBoxMaxTime);
-            this.pnlMain.Controls.Add(this.txtBoxmaxTemp);
+            this.pnlMain.Controls.Add(this.txtBoxMaxTemp);
             this.pnlMain.Controls.Add(this.lstBoxMain);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlMain.Location = new System.Drawing.Point(495, 0);
@@ -107,13 +107,13 @@ namespace FishMonitoring
             this.txtBoxMaxTime.Size = new System.Drawing.Size(94, 27);
             this.txtBoxMaxTime.TabIndex = 2;
             // 
-            // txtBoxmaxTemp
+            // txtBoxMaxTemp
             // 
-            this.txtBoxmaxTemp.Location = new System.Drawing.Point(46, 114);
-            this.txtBoxmaxTemp.Name = "txtBoxmaxTemp";
-            this.txtBoxmaxTemp.ReadOnly = true;
-            this.txtBoxmaxTemp.Size = new System.Drawing.Size(94, 27);
-            this.txtBoxmaxTemp.TabIndex = 1;
+            this.txtBoxMaxTemp.Location = new System.Drawing.Point(46, 114);
+            this.txtBoxMaxTemp.Name = "txtBoxMaxTemp";
+            this.txtBoxMaxTemp.ReadOnly = true;
+            this.txtBoxMaxTemp.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxMaxTemp.TabIndex = 1;
             // 
             // lstBoxMain
             // 
@@ -126,6 +126,7 @@ namespace FishMonitoring
             this.lstBoxMain.Name = "lstBoxMain";
             this.lstBoxMain.Size = new System.Drawing.Size(242, 44);
             this.lstBoxMain.TabIndex = 0;
+            this.lstBoxMain.SelectedIndexChanged += new System.EventHandler(this.LstBoxMain_SelectedIndexChanged);
             // 
             // openFileDialog
             // 
@@ -149,7 +150,7 @@ namespace FishMonitoring
 
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.ListBox lstBoxMain;
-        private System.Windows.Forms.TextBox txtBoxmaxTemp;
+        private System.Windows.Forms.TextBox txtBoxMaxTemp;
         private System.Windows.Forms.TextBox txtBoxMinTime;
         private System.Windows.Forms.TextBox txtBoxMin;
         private System.Windows.Forms.TextBox txtBoxMaxTime;

@@ -32,5 +32,15 @@ namespace FishMonitoring
             txtBoxDateBeg.Text = data[0];
             txtBoxTempEd.Text = data[1];
         }
+
+        private void LstBoxMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nameOfFish = lstBoxMain.SelectedItem.ToString();
+            string[] infoName = FishLibrary.Fishes.Info(nameOfFish).Split(" ");
+            txtBoxMaxTemp.Text = infoName[0];
+            txtBoxMaxTime.Text = infoName[1];
+            txtBoxMin.Text = infoName[2];
+            txtBoxMinTime.Text = infoName[3];
+        }
     }
 }

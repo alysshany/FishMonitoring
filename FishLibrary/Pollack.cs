@@ -6,10 +6,10 @@ namespace FishLibrary
 {
     class Pollack : Fish
     {
-        readonly int maxTemp = -5;
-        readonly int? minTemp = null;
-        readonly int maxTempTime = 20;
-        readonly int? minTempTime = null;
+        public static int maxTemp = -5;
+        public static int? minTemp = null;
+        public static int maxTempTime = 20;
+        public static int? minTempTime = null;
 
         public Pollack()
         {

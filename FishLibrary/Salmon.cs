@@ -6,10 +6,10 @@ namespace FishLibrary
 {
     class Salmon : Fish
     {
-        readonly int maxTemp = 5;
-        readonly int minTemp = -3;
-        readonly int maxTempTime = 20;
-        readonly int minTempTime = 60;
+        public static int maxTemp = 5;
+        public static int minTemp = -3;
+        public static int maxTempTime = 20;
+        public static int minTempTime = 60;
 
         public Salmon()
         {
