@@ -44,12 +44,20 @@ namespace FishMonitoring
             this.lstBoxFish = new System.Windows.Forms.ListBox();
             this.txtBoxRes = new System.Windows.Forms.TextBox();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.lblMax = new System.Windows.Forms.Label();
+            this.lblMin = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblTemp = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pnlMain.Controls.Add(this.lblTemp);
+            this.pnlMain.Controls.Add(this.lblData);
+            this.pnlMain.Controls.Add(this.lblMin);
+            this.pnlMain.Controls.Add(this.lblMax);
             this.pnlMain.Controls.Add(this.btnSave);
             this.pnlMain.Controls.Add(this.btnOk);
             this.pnlMain.Controls.Add(this.btnOpen);
@@ -98,21 +106,21 @@ namespace FishMonitoring
             // 
             // txtBoxTempEd
             // 
-            this.txtBoxTempEd.Location = new System.Drawing.Point(46, 305);
+            this.txtBoxTempEd.Location = new System.Drawing.Point(46, 309);
             this.txtBoxTempEd.Name = "txtBoxTempEd";
             this.txtBoxTempEd.Size = new System.Drawing.Size(205, 27);
             this.txtBoxTempEd.TabIndex = 6;
             // 
             // txtBoxDateBeg
             // 
-            this.txtBoxDateBeg.Location = new System.Drawing.Point(46, 271);
+            this.txtBoxDateBeg.Location = new System.Drawing.Point(46, 252);
             this.txtBoxDateBeg.Name = "txtBoxDateBeg";
             this.txtBoxDateBeg.Size = new System.Drawing.Size(205, 27);
             this.txtBoxDateBeg.TabIndex = 5;
             // 
             // txtBoxMinTime
             // 
-            this.txtBoxMinTime.Location = new System.Drawing.Point(157, 158);
+            this.txtBoxMinTime.Location = new System.Drawing.Point(157, 172);
             this.txtBoxMinTime.Name = "txtBoxMinTime";
             this.txtBoxMinTime.ReadOnly = true;
             this.txtBoxMinTime.Size = new System.Drawing.Size(94, 27);
@@ -120,7 +128,7 @@ namespace FishMonitoring
             // 
             // txtBoxMin
             // 
-            this.txtBoxMin.Location = new System.Drawing.Point(46, 158);
+            this.txtBoxMin.Location = new System.Drawing.Point(46, 172);
             this.txtBoxMin.Name = "txtBoxMin";
             this.txtBoxMin.ReadOnly = true;
             this.txtBoxMin.Size = new System.Drawing.Size(94, 27);
@@ -178,6 +186,42 @@ namespace FishMonitoring
             this.txtBoxRes.Size = new System.Drawing.Size(495, 80);
             this.txtBoxRes.TabIndex = 2;
             // 
+            // lblMax
+            // 
+            this.lblMax.AutoSize = true;
+            this.lblMax.Location = new System.Drawing.Point(46, 91);
+            this.lblMax.Name = "lblMax";
+            this.lblMax.Size = new System.Drawing.Size(41, 20);
+            this.lblMax.TabIndex = 10;
+            this.lblMax.Text = "MAX";
+            // 
+            // lblMin
+            // 
+            this.lblMin.AutoSize = true;
+            this.lblMin.Location = new System.Drawing.Point(46, 149);
+            this.lblMin.Name = "lblMin";
+            this.lblMin.Size = new System.Drawing.Size(37, 20);
+            this.lblMin.TabIndex = 11;
+            this.lblMin.Text = "MIN";
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Location = new System.Drawing.Point(46, 229);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(41, 20);
+            this.lblData.TabIndex = 12;
+            this.lblData.Text = "Data";
+            // 
+            // lblTemp
+            // 
+            this.lblTemp.AutoSize = true;
+            this.lblTemp.Location = new System.Drawing.Point(46, 286);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(46, 20);
+            this.lblTemp.TabIndex = 13;
+            this.lblTemp.Text = "Temp";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -212,6 +256,10 @@ namespace FishMonitoring
         private System.Windows.Forms.TextBox txtBoxRes;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.Label lblMin;
+        private System.Windows.Forms.Label lblMax;
+        private System.Windows.Forms.Label lblTemp;
+        private System.Windows.Forms.Label lblData;
     }
 }
 
