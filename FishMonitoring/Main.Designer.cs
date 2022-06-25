@@ -53,7 +53,7 @@ namespace FishMonitoring
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pnlMain.Controls.Add(this.lblTemp);
             this.pnlMain.Controls.Add(this.lblData);
             this.pnlMain.Controls.Add(this.lblMin);
@@ -205,6 +205,7 @@ namespace FishMonitoring
             // 
             // lstBoxFish
             // 
+            this.lstBoxFish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lstBoxFish.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lstBoxFish.FormattingEnabled = true;
             this.lstBoxFish.ItemHeight = 20;
@@ -215,6 +216,7 @@ namespace FishMonitoring
             // 
             // txtBoxRes
             // 
+            this.txtBoxRes.BackColor = System.Drawing.Color.White;
             this.txtBoxRes.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtBoxRes.Location = new System.Drawing.Point(0, 0);
             this.txtBoxRes.Multiline = true;

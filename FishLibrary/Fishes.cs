@@ -82,7 +82,6 @@ namespace FishLibrary
                     {
                         if (Convert.ToInt32(newTemp[i]) > Salmon.maxTemp)
                         {
-                            int k = i;
                             errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " + 
                                     newTemp[i] + " Норма: " + Salmon.maxTemp + ";";
                             countMax++;
