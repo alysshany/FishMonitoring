@@ -10,5 +10,10 @@ namespace FishLibrary
         readonly int? minTemp = null;
         readonly int maxTempTime = 20;
         readonly int? minTempTime = null;
+
+        public Pollack()
+        {
+
+        }
     }
 }

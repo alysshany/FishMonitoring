@@ -10,5 +10,10 @@ namespace FishLibrary
         readonly int minTemp = -3;
         readonly int maxTempTime = 20;
         readonly int minTempTime = 60;
+
+        public Salmon()
+        {
+
+        }
     }
 }

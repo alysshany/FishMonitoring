@@ -35,12 +35,19 @@ namespace FishMonitoring
             this.txtBoxMaxTime = new System.Windows.Forms.TextBox();
             this.txtBoxMin = new System.Windows.Forms.TextBox();
             this.txtBoxMinTime = new System.Windows.Forms.TextBox();
+            this.txtBoxDateBeg = new System.Windows.Forms.TextBox();
+            this.txtBoxTempEd = new System.Windows.Forms.TextBox();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pnlMain.Controls.Add(this.btnOpen);
+            this.pnlMain.Controls.Add(this.txtBoxTempEd);
+            this.pnlMain.Controls.Add(this.txtBoxDateBeg);
             this.pnlMain.Controls.Add(this.txtBoxMinTime);
             this.pnlMain.Controls.Add(this.txtBoxMin);
             this.pnlMain.Controls.Add(this.txtBoxMaxTime);
@@ -97,6 +104,33 @@ namespace FishMonitoring
             this.txtBoxMinTime.Size = new System.Drawing.Size(94, 27);
             this.txtBoxMinTime.TabIndex = 4;
             // 
+            // txtBoxDateBeg
+            // 
+            this.txtBoxDateBeg.Location = new System.Drawing.Point(46, 271);
+            this.txtBoxDateBeg.Name = "txtBoxDateBeg";
+            this.txtBoxDateBeg.Size = new System.Drawing.Size(205, 27);
+            this.txtBoxDateBeg.TabIndex = 5;
+            // 
+            // txtBoxTempEd
+            // 
+            this.txtBoxTempEd.Location = new System.Drawing.Point(46, 305);
+            this.txtBoxTempEd.Name = "txtBoxTempEd";
+            this.txtBoxTempEd.Size = new System.Drawing.Size(205, 27);
+            this.txtBoxTempEd.TabIndex = 6;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(181, 409);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(94, 29);
+            this.btnOpen.TabIndex = 7;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -119,6 +153,10 @@ namespace FishMonitoring
         private System.Windows.Forms.TextBox txtBoxMinTime;
         private System.Windows.Forms.TextBox txtBoxMin;
         private System.Windows.Forms.TextBox txtBoxMaxTime;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.TextBox txtBoxTempEd;
+        private System.Windows.Forms.TextBox txtBoxDateBeg;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
