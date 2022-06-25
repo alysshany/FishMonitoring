@@ -6,12 +6,8 @@ namespace FishLibrary
 {
     public class Fishes
     {
-        public static List<Fish> FishList;
+        public static List<Fish> FishList = new List<Fish>();
 
-        public Fishes()
-        {
-            FishList = new List<Fish>();
-        } 
 
         public static string Info(string name)
         {

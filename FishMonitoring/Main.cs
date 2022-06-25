@@ -60,7 +60,13 @@ namespace FishMonitoring
                     k = i;
                 }
                 txtBoxRes.Text = $"Превышен порог на {k*10} минут";
+                MessageBox.Show("Отчет сформирован!");
             }
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
