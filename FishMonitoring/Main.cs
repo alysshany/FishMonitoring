@@ -55,7 +55,6 @@ namespace FishMonitoring
                 string[] newStr = str.Split(";");
                 for (int i = 0; i < newStr.Length; i++)
                 {
-                    string[] littleStr = newStr.ToString().Split(" ");
                     lstBoxFish.Items.Add(newStr[i].ToString());
                     k = i;
                 }
@@ -66,7 +65,18 @@ namespace FishMonitoring
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
+            if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
+            {
+                return;
+            }
+            string fileName = saveFileDialog.FileName;
+            string str = "";
+            foreach (string s in lstBoxFish.Items)
+            {
+                str += s + ";";
+            }
+            Fishes.Save(fileName, str, lstBoxMain.SelectedItem.ToString(), txtBoxRes.Text);
+            MessageBox.Show("Отчет загружен");
         }
     }
 }

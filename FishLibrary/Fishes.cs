@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace FishLibrary
@@ -28,7 +29,7 @@ namespace FishLibrary
 
         public static string Fab(string name, string data, string temp)
         {
-            string s = null;
+            string s;
             switch (name)
             {
                 case "Pollack":
@@ -101,6 +102,20 @@ namespace FishLibrary
                     return null;
                 default:
                     return null;
+            }
+        }
+
+        public static void Save(string path, string info, string name, string text)
+        {
+            string[] str = info.Split(";");
+            using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
+            {
+                sw.WriteLine(name);
+                sw.WriteLine(text);
+                for (int i = 0; i < str.Length; i++)
+                {
+                    sw.WriteLine(str[i]);
+                }
             }
         }
     }
