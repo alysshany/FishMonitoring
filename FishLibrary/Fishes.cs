@@ -9,7 +9,6 @@ namespace FishLibrary
     {
         public static List<Fish> FishList = new List<Fish>();
 
-
         public static string Info(string name)
         {
             switch (name)
@@ -67,7 +66,7 @@ namespace FishLibrary
                     {
                         if (Convert.ToInt32(newTemp[i]) > Pollack.maxTemp)
                         {
-                            errors += newData.AddMinutes((i) * 10) + " " + newTemp[i] + " " +  Pollack.maxTemp + ";";
+                            errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " +  newTemp[i] + " Норма: " +  Pollack.maxTemp + ";";
                             countMax++;
                         }
                     }
@@ -82,12 +81,12 @@ namespace FishLibrary
                         if (Convert.ToInt32(newTemp[i]) > Salmon.maxTemp)
                         {
                             int k = i;
-                            errors += newData.AddMinutes((i) * 10) + " " + newTemp[i] + " " + Salmon.maxTemp + ";";
+                            errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " + newTemp[i] + " Норма: " + Salmon.maxTemp + ";";
                             countMax++;
                         }
                         else if (Convert.ToInt32(newTemp[i]) < Salmon.minTemp)
                         {
-                            errors += newData.AddMinutes((i) * 10) + " " + newTemp[i] + " " + Salmon.minTemp + ";";
+                            errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " + newTemp[i] + " Норма: " + Salmon.minTemp + ";";
                             countMin++;
                         }
                     }
