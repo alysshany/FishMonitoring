@@ -11,9 +11,10 @@ namespace FishLibrary
         public static int maxTempTime = 20;
         public static int minTempTime = 60;
 
-        public Salmon()
+        public Salmon(string data, string temp)
         {
-
+            base.dataFish = data;
+            base.tempFish = temp;
         }
     }
 }

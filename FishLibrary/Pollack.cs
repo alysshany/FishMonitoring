@@ -11,9 +11,10 @@ namespace FishLibrary
         public static int maxTempTime = 20;
         public static int? minTempTime = null;
 
-        public Pollack()
+        public Pollack(string data, string temp)
         {
-
+            base.dataFish = data;
+            base.tempFish = temp;
         }
     }
 }

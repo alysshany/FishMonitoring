@@ -30,6 +30,7 @@ namespace FishMonitoring
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnOk = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.txtBoxTempEd = new System.Windows.Forms.TextBox();
             this.txtBoxDateBeg = new System.Windows.Forms.TextBox();
@@ -39,12 +40,15 @@ namespace FishMonitoring
             this.txtBoxMaxTemp = new System.Windows.Forms.TextBox();
             this.lstBoxMain = new System.Windows.Forms.ListBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.lstBoxFish = new System.Windows.Forms.ListBox();
+            this.txtBoxRes = new System.Windows.Forms.TextBox();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pnlMain.Controls.Add(this.btnOk);
             this.pnlMain.Controls.Add(this.btnOpen);
             this.pnlMain.Controls.Add(this.txtBoxTempEd);
             this.pnlMain.Controls.Add(this.txtBoxDateBeg);
@@ -58,6 +62,16 @@ namespace FishMonitoring
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(305, 450);
             this.pnlMain.TabIndex = 0;
+            // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(181, 364);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(94, 29);
+            this.btnOk.TabIndex = 8;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.BtnOk_Click);
             // 
             // btnOpen
             // 
@@ -132,17 +146,38 @@ namespace FishMonitoring
             // 
             this.openFileDialog.FileName = "openFileDialog";
             // 
+            // lstBoxFish
+            // 
+            this.lstBoxFish.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lstBoxFish.FormattingEnabled = true;
+            this.lstBoxFish.ItemHeight = 20;
+            this.lstBoxFish.Location = new System.Drawing.Point(0, 86);
+            this.lstBoxFish.Name = "lstBoxFish";
+            this.lstBoxFish.Size = new System.Drawing.Size(495, 364);
+            this.lstBoxFish.TabIndex = 1;
+            // 
+            // txtBoxRes
+            // 
+            this.txtBoxRes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtBoxRes.Location = new System.Drawing.Point(0, 0);
+            this.txtBoxRes.Name = "txtBoxRes";
+            this.txtBoxRes.Size = new System.Drawing.Size(495, 27);
+            this.txtBoxRes.TabIndex = 2;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBoxRes);
+            this.Controls.Add(this.lstBoxFish);
             this.Controls.Add(this.pnlMain);
             this.Name = "frmMain";
             this.Text = "Main";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -158,6 +193,9 @@ namespace FishMonitoring
         private System.Windows.Forms.TextBox txtBoxTempEd;
         private System.Windows.Forms.TextBox txtBoxDateBeg;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.ListBox lstBoxFish;
+        private System.Windows.Forms.TextBox txtBoxRes;
     }
 }
 

@@ -42,5 +42,25 @@ namespace FishMonitoring
             txtBoxMin.Text = infoName[2];
             txtBoxMinTime.Text = infoName[3];
         }
+
+        private void BtnOk_Click(object sender, EventArgs e)
+        {
+            string nameOfFish = lstBoxMain.SelectedItem.ToString();
+            string informationOfDay = txtBoxDateBeg.Text.ToString();
+            string informationOfTemp = txtBoxTempEd.Text.ToString();
+            string str = Fishes.Fab(nameOfFish, informationOfDay, informationOfTemp);
+            if (str != null)
+            {
+                int k = 0;
+                string[] newStr = str.Split(";");
+                for (int i = 0; i < newStr.Length; i++)
+                {
+                    string[] littleStr = newStr.ToString().Split(" ");
+                    lstBoxFish.Items.Add(newStr[i].ToString());
+                    k = i;
+                }
+                txtBoxRes.Text = $"Превышен порог на {k*10} минут";
+            }
+        }
     }
 }
