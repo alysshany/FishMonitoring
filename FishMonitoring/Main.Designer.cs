@@ -30,6 +30,7 @@ namespace FishMonitoring
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.txtBoxTempEd = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@ namespace FishMonitoring
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.lstBoxFish = new System.Windows.Forms.ListBox();
             this.txtBoxRes = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,16 @@ namespace FishMonitoring
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(305, 450);
             this.pnlMain.TabIndex = 0;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(68, 409);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 29);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnOk
             // 
@@ -163,19 +173,10 @@ namespace FishMonitoring
             // 
             this.txtBoxRes.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtBoxRes.Location = new System.Drawing.Point(0, 0);
+            this.txtBoxRes.Multiline = true;
             this.txtBoxRes.Name = "txtBoxRes";
-            this.txtBoxRes.Size = new System.Drawing.Size(495, 27);
+            this.txtBoxRes.Size = new System.Drawing.Size(495, 80);
             this.txtBoxRes.TabIndex = 2;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(68, 409);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 29);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // frmMain
             // 

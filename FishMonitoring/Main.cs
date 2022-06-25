@@ -58,7 +58,7 @@ namespace FishMonitoring
                     lstBoxFish.Items.Add(newStr[i].ToString());
                     k = i;
                 }
-                txtBoxRes.Text = $"Превышен порог на {k*10} минут";
+                txtBoxRes.Text += $"Превышен порог перевозки {nameOfFish} на {k*10} минут" + Environment.NewLine;
                 MessageBox.Show("Отчет сформирован!");
             }
         }
@@ -75,7 +75,7 @@ namespace FishMonitoring
             {
                 str += s + ";";
             }
-            Fishes.Save(fileName, str, lstBoxMain.SelectedItem.ToString(), txtBoxRes.Text);
+            Fishes.Save(fileName, str, txtBoxRes.Text);
             MessageBox.Show("Отчет загружен");
         }
     }

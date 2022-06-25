@@ -67,7 +67,7 @@ namespace FishLibrary
                     {
                         if (Convert.ToInt32(newTemp[i]) > Pollack.maxTemp)
                         {
-                            errors += newData.AddMinutes((i + 1) * 10) + " " + newTemp[i] + " " +  Pollack.maxTemp + ";";
+                            errors += newData.AddMinutes((i) * 10) + " " + newTemp[i] + " " +  Pollack.maxTemp + ";";
                             countMax++;
                         }
                     }
@@ -82,12 +82,12 @@ namespace FishLibrary
                         if (Convert.ToInt32(newTemp[i]) > Salmon.maxTemp)
                         {
                             int k = i;
-                            errors += newData.AddMinutes((k+1) * 10) + " " + newTemp[i] + " " + Salmon.maxTemp + ";";
+                            errors += newData.AddMinutes((i) * 10) + " " + newTemp[i] + " " + Salmon.maxTemp + ";";
                             countMax++;
                         }
                         else if (Convert.ToInt32(newTemp[i]) < Salmon.minTemp)
                         {
-                            errors += newData.AddMinutes((i + 1) * 10) + " " + newTemp[i] + " " + Salmon.minTemp + ";";
+                            errors += newData.AddMinutes((i) * 10) + " " + newTemp[i] + " " + Salmon.minTemp + ";";
                             countMin++;
                         }
                     }
@@ -105,12 +105,11 @@ namespace FishLibrary
             }
         }
 
-        public static void Save(string path, string info, string name, string text)
+        public static void Save(string path, string info, string text)
         {
             string[] str = info.Split(";");
             using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
             {
-                sw.WriteLine(name);
                 sw.WriteLine(text);
                 for (int i = 0; i < str.Length; i++)
                 {
