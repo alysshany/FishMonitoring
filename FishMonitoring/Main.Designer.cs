@@ -29,20 +29,96 @@ namespace FishMonitoring
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.lstBoxMain = new System.Windows.Forms.ListBox();
+            this.txtBoxmaxTemp = new System.Windows.Forms.TextBox();
+            this.txtBoxMaxTime = new System.Windows.Forms.TextBox();
+            this.txtBoxMin = new System.Windows.Forms.TextBox();
+            this.txtBoxMinTime = new System.Windows.Forms.TextBox();
+            this.pnlMain.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pnlMain.Controls.Add(this.txtBoxMinTime);
+            this.pnlMain.Controls.Add(this.txtBoxMin);
+            this.pnlMain.Controls.Add(this.txtBoxMaxTime);
+            this.pnlMain.Controls.Add(this.txtBoxmaxTemp);
+            this.pnlMain.Controls.Add(this.lstBoxMain);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMain.Location = new System.Drawing.Point(495, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(305, 450);
+            this.pnlMain.TabIndex = 0;
+            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
+            // 
+            // lstBoxMain
+            // 
+            this.lstBoxMain.FormattingEnabled = true;
+            this.lstBoxMain.ItemHeight = 20;
+            this.lstBoxMain.Items.AddRange(new object[] {
+            "Salmon",
+            "Pollack"});
+            this.lstBoxMain.Location = new System.Drawing.Point(33, 28);
+            this.lstBoxMain.Name = "lstBoxMain";
+            this.lstBoxMain.Size = new System.Drawing.Size(242, 44);
+            this.lstBoxMain.TabIndex = 0;
+            // 
+            // txtBoxmaxTemp
+            // 
+            this.txtBoxmaxTemp.Location = new System.Drawing.Point(46, 114);
+            this.txtBoxmaxTemp.Name = "txtBoxmaxTemp";
+            this.txtBoxmaxTemp.ReadOnly = true;
+            this.txtBoxmaxTemp.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxmaxTemp.TabIndex = 1;
+            // 
+            // txtBoxMaxTime
+            // 
+            this.txtBoxMaxTime.Location = new System.Drawing.Point(157, 114);
+            this.txtBoxMaxTime.Name = "txtBoxMaxTime";
+            this.txtBoxMaxTime.ReadOnly = true;
+            this.txtBoxMaxTime.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxMaxTime.TabIndex = 2;
+            // 
+            // txtBoxMin
+            // 
+            this.txtBoxMin.Location = new System.Drawing.Point(46, 158);
+            this.txtBoxMin.Name = "txtBoxMin";
+            this.txtBoxMin.ReadOnly = true;
+            this.txtBoxMin.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxMin.TabIndex = 3;
+            // 
+            // txtBoxMinTime
+            // 
+            this.txtBoxMinTime.Location = new System.Drawing.Point(157, 158);
+            this.txtBoxMinTime.Name = "txtBoxMinTime";
+            this.txtBoxMinTime.ReadOnly = true;
+            this.txtBoxMinTime.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxMinTime.TabIndex = 4;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlMain);
             this.Name = "frmMain";
             this.Text = "Main";
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.ListBox lstBoxMain;
+        private System.Windows.Forms.TextBox txtBoxmaxTemp;
+        private System.Windows.Forms.TextBox txtBoxMinTime;
+        private System.Windows.Forms.TextBox txtBoxMin;
+        private System.Windows.Forms.TextBox txtBoxMaxTime;
     }
 }
 

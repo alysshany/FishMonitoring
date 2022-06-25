@@ -17,5 +17,9 @@ namespace FishMonitoring
             InitializeComponent();
         }
 
+        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
