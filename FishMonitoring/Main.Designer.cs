@@ -30,6 +30,10 @@ namespace FishMonitoring
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.lblTemp = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblMin = new System.Windows.Forms.Label();
+            this.lblMax = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
@@ -44,10 +48,6 @@ namespace FishMonitoring
             this.lstBoxFish = new System.Windows.Forms.ListBox();
             this.txtBoxRes = new System.Windows.Forms.TextBox();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.lblMax = new System.Windows.Forms.Label();
-            this.lblMin = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
-            this.lblTemp = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,42 @@ namespace FishMonitoring
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(305, 450);
             this.pnlMain.TabIndex = 0;
+            // 
+            // lblTemp
+            // 
+            this.lblTemp.AutoSize = true;
+            this.lblTemp.Location = new System.Drawing.Point(46, 286);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(46, 20);
+            this.lblTemp.TabIndex = 13;
+            this.lblTemp.Text = "Temp";
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Location = new System.Drawing.Point(46, 229);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(41, 20);
+            this.lblData.TabIndex = 12;
+            this.lblData.Text = "Data";
+            // 
+            // lblMin
+            // 
+            this.lblMin.AutoSize = true;
+            this.lblMin.Location = new System.Drawing.Point(46, 149);
+            this.lblMin.Name = "lblMin";
+            this.lblMin.Size = new System.Drawing.Size(37, 20);
+            this.lblMin.TabIndex = 11;
+            this.lblMin.Text = "MIN";
+            // 
+            // lblMax
+            // 
+            this.lblMax.AutoSize = true;
+            this.lblMax.Location = new System.Drawing.Point(46, 91);
+            this.lblMax.Name = "lblMax";
+            this.lblMax.Size = new System.Drawing.Size(41, 20);
+            this.lblMax.TabIndex = 10;
+            this.lblMax.Text = "MAX";
             // 
             // btnSave
             // 
@@ -185,42 +221,6 @@ namespace FishMonitoring
             this.txtBoxRes.Name = "txtBoxRes";
             this.txtBoxRes.Size = new System.Drawing.Size(495, 80);
             this.txtBoxRes.TabIndex = 2;
-            // 
-            // lblMax
-            // 
-            this.lblMax.AutoSize = true;
-            this.lblMax.Location = new System.Drawing.Point(46, 91);
-            this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(41, 20);
-            this.lblMax.TabIndex = 10;
-            this.lblMax.Text = "MAX";
-            // 
-            // lblMin
-            // 
-            this.lblMin.AutoSize = true;
-            this.lblMin.Location = new System.Drawing.Point(46, 149);
-            this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(37, 20);
-            this.lblMin.TabIndex = 11;
-            this.lblMin.Text = "MIN";
-            // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(46, 229);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(41, 20);
-            this.lblData.TabIndex = 12;
-            this.lblData.Text = "Data";
-            // 
-            // lblTemp
-            // 
-            this.lblTemp.AutoSize = true;
-            this.lblTemp.Location = new System.Drawing.Point(46, 286);
-            this.lblTemp.Name = "lblTemp";
-            this.lblTemp.Size = new System.Drawing.Size(46, 20);
-            this.lblTemp.TabIndex = 13;
-            this.lblTemp.Text = "Temp";
             // 
             // frmMain
             // 

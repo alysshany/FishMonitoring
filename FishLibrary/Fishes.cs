@@ -59,6 +59,7 @@ namespace FishLibrary
             int countMin = 0;
             int countMax = 0;
             string errors = "";
+            string errorsTwo = "";
             switch (name)
             {
                 case "Pollack":
@@ -66,7 +67,8 @@ namespace FishLibrary
                     {
                         if (Convert.ToInt32(newTemp[i]) > Pollack.maxTemp)
                         {
-                            errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " +  newTemp[i] + " Норма: " +  Pollack.maxTemp + ";";
+                            errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " +  
+                                    newTemp[i] + " Норма: " +  Pollack.maxTemp + ";";
                             countMax++;
                         }
                     }
@@ -81,22 +83,28 @@ namespace FishLibrary
                         if (Convert.ToInt32(newTemp[i]) > Salmon.maxTemp)
                         {
                             int k = i;
-                            errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " + newTemp[i] + " Норма: " + Salmon.maxTemp + ";";
+                            errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " + 
+                                    newTemp[i] + " Норма: " + Salmon.maxTemp + ";";
                             countMax++;
                         }
-                        else if (Convert.ToInt32(newTemp[i]) < Salmon.minTemp)
+                        if (Convert.ToInt32(newTemp[i]) < Salmon.minTemp)
                         {
-                            errors += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " + newTemp[i] + " Норма: " + Salmon.minTemp + ";";
+                            errorsTwo += "Время: " + newData.AddMinutes((i) * 10) + " Факт: " + 
+                                    newTemp[i] + " Норма: " + Salmon.minTemp + ";";
                             countMin++;
                         }
                     }
-                    if (countMax * 10 >= Salmon.maxTempTime)
+                    if (countMax * 10 >= Salmon.maxTempTime && countMin * 10 >= Salmon.minTempTime)
+                    {
+                        return errors + errorsTwo;
+                    }
+                    else if (countMax * 10 >= Salmon.maxTempTime)
                     {
                         return errors;
                     }
                     else if (countMin * 10 >= Salmon.minTempTime)
                     {
-                        return errors;
+                        return errorsTwo;
                     }
                     return null;
                 default:
