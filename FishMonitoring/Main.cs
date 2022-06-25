@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FishLibrary;
+using ParsingLibrary;
+
+
 
 namespace FishMonitoring
 {
@@ -17,9 +21,16 @@ namespace FishMonitoring
             InitializeComponent();
         }
 
-        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        private void BtnOpen_Click(object sender, EventArgs e)
         {
-
+            if (openFileDialog.ShowDialog() == DialogResult.Cancel)
+            {
+                return;
+            }
+            string fileName = openFileDialog.FileName;
+            string[] data = Parsing.Parse(fileName);
+            txtBoxDateBeg.Text = data[0];
+            txtBoxTempEd.Text = data[1];
         }
     }
 }

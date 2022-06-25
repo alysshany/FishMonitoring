@@ -30,14 +30,14 @@ namespace FishMonitoring
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lstBoxMain = new System.Windows.Forms.ListBox();
-            this.txtBoxmaxTemp = new System.Windows.Forms.TextBox();
-            this.txtBoxMaxTime = new System.Windows.Forms.TextBox();
-            this.txtBoxMin = new System.Windows.Forms.TextBox();
-            this.txtBoxMinTime = new System.Windows.Forms.TextBox();
-            this.txtBoxDateBeg = new System.Windows.Forms.TextBox();
-            this.txtBoxTempEd = new System.Windows.Forms.TextBox();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.txtBoxTempEd = new System.Windows.Forms.TextBox();
+            this.txtBoxDateBeg = new System.Windows.Forms.TextBox();
+            this.txtBoxMinTime = new System.Windows.Forms.TextBox();
+            this.txtBoxMin = new System.Windows.Forms.TextBox();
+            this.txtBoxMaxTime = new System.Windows.Forms.TextBox();
+            this.txtBoxmaxTemp = new System.Windows.Forms.TextBox();
+            this.lstBoxMain = new System.Windows.Forms.ListBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,62 @@ namespace FishMonitoring
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(305, 450);
             this.pnlMain.TabIndex = 0;
-            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(181, 409);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(94, 29);
+            this.btnOpen.TabIndex = 7;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
+            // 
+            // txtBoxTempEd
+            // 
+            this.txtBoxTempEd.Location = new System.Drawing.Point(46, 305);
+            this.txtBoxTempEd.Name = "txtBoxTempEd";
+            this.txtBoxTempEd.Size = new System.Drawing.Size(205, 27);
+            this.txtBoxTempEd.TabIndex = 6;
+            // 
+            // txtBoxDateBeg
+            // 
+            this.txtBoxDateBeg.Location = new System.Drawing.Point(46, 271);
+            this.txtBoxDateBeg.Name = "txtBoxDateBeg";
+            this.txtBoxDateBeg.Size = new System.Drawing.Size(205, 27);
+            this.txtBoxDateBeg.TabIndex = 5;
+            // 
+            // txtBoxMinTime
+            // 
+            this.txtBoxMinTime.Location = new System.Drawing.Point(157, 158);
+            this.txtBoxMinTime.Name = "txtBoxMinTime";
+            this.txtBoxMinTime.ReadOnly = true;
+            this.txtBoxMinTime.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxMinTime.TabIndex = 4;
+            // 
+            // txtBoxMin
+            // 
+            this.txtBoxMin.Location = new System.Drawing.Point(46, 158);
+            this.txtBoxMin.Name = "txtBoxMin";
+            this.txtBoxMin.ReadOnly = true;
+            this.txtBoxMin.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxMin.TabIndex = 3;
+            // 
+            // txtBoxMaxTime
+            // 
+            this.txtBoxMaxTime.Location = new System.Drawing.Point(157, 114);
+            this.txtBoxMaxTime.Name = "txtBoxMaxTime";
+            this.txtBoxMaxTime.ReadOnly = true;
+            this.txtBoxMaxTime.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxMaxTime.TabIndex = 2;
+            // 
+            // txtBoxmaxTemp
+            // 
+            this.txtBoxmaxTemp.Location = new System.Drawing.Point(46, 114);
+            this.txtBoxmaxTemp.Name = "txtBoxmaxTemp";
+            this.txtBoxmaxTemp.ReadOnly = true;
+            this.txtBoxmaxTemp.Size = new System.Drawing.Size(94, 27);
+            this.txtBoxmaxTemp.TabIndex = 1;
             // 
             // lstBoxMain
             // 
@@ -71,61 +126,6 @@ namespace FishMonitoring
             this.lstBoxMain.Name = "lstBoxMain";
             this.lstBoxMain.Size = new System.Drawing.Size(242, 44);
             this.lstBoxMain.TabIndex = 0;
-            // 
-            // txtBoxmaxTemp
-            // 
-            this.txtBoxmaxTemp.Location = new System.Drawing.Point(46, 114);
-            this.txtBoxmaxTemp.Name = "txtBoxmaxTemp";
-            this.txtBoxmaxTemp.ReadOnly = true;
-            this.txtBoxmaxTemp.Size = new System.Drawing.Size(94, 27);
-            this.txtBoxmaxTemp.TabIndex = 1;
-            // 
-            // txtBoxMaxTime
-            // 
-            this.txtBoxMaxTime.Location = new System.Drawing.Point(157, 114);
-            this.txtBoxMaxTime.Name = "txtBoxMaxTime";
-            this.txtBoxMaxTime.ReadOnly = true;
-            this.txtBoxMaxTime.Size = new System.Drawing.Size(94, 27);
-            this.txtBoxMaxTime.TabIndex = 2;
-            // 
-            // txtBoxMin
-            // 
-            this.txtBoxMin.Location = new System.Drawing.Point(46, 158);
-            this.txtBoxMin.Name = "txtBoxMin";
-            this.txtBoxMin.ReadOnly = true;
-            this.txtBoxMin.Size = new System.Drawing.Size(94, 27);
-            this.txtBoxMin.TabIndex = 3;
-            // 
-            // txtBoxMinTime
-            // 
-            this.txtBoxMinTime.Location = new System.Drawing.Point(157, 158);
-            this.txtBoxMinTime.Name = "txtBoxMinTime";
-            this.txtBoxMinTime.ReadOnly = true;
-            this.txtBoxMinTime.Size = new System.Drawing.Size(94, 27);
-            this.txtBoxMinTime.TabIndex = 4;
-            // 
-            // txtBoxDateBeg
-            // 
-            this.txtBoxDateBeg.Location = new System.Drawing.Point(46, 271);
-            this.txtBoxDateBeg.Name = "txtBoxDateBeg";
-            this.txtBoxDateBeg.Size = new System.Drawing.Size(205, 27);
-            this.txtBoxDateBeg.TabIndex = 5;
-            // 
-            // txtBoxTempEd
-            // 
-            this.txtBoxTempEd.Location = new System.Drawing.Point(46, 305);
-            this.txtBoxTempEd.Name = "txtBoxTempEd";
-            this.txtBoxTempEd.Size = new System.Drawing.Size(205, 27);
-            this.txtBoxTempEd.TabIndex = 6;
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Location = new System.Drawing.Point(181, 409);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(94, 29);
-            this.btnOpen.TabIndex = 7;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
             // 
             // openFileDialog
             // 
